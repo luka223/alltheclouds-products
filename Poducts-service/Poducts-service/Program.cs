@@ -20,7 +20,7 @@ services.AddAutoMapper(Assembly.GetExecutingAssembly());
 
 services.AddHttpClient();
 
-services.AddSingleton<HttpConfiguration>();
+services.AddSingleton<ProductsHttpAPIConfiguration>();
 services.AddSingleton<IProductsService, ProductsService>();
 services.AddSingleton<IProductsRepository, ProductsHTTPClient>();
 

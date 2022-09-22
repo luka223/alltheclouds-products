@@ -1,6 +1,5 @@
 ﻿using Poducts_service.Config;
 using Poducts_service.Domain;
-using System.Net.Http.Headers;
 using System.Text.Json;
 
 namespace Poducts_service.Repository.Http
@@ -17,9 +16,9 @@ namespace Poducts_service.Repository.Http
         private static readonly string API_KEY_HEADER_NAME = "api-key";
 
         private readonly HttpClient _httpClient;
-        private readonly HttpConfiguration _httpConfiguration;
+        private readonly ProductsHttpAPIConfiguration _httpConfiguration;
 
-        public ProductsHTTPClient(HttpClient httpClient, HttpConfiguration httpConfiguration)
+        public ProductsHTTPClient(HttpClient httpClient, ProductsHttpAPIConfiguration httpConfiguration)
         {
             _httpClient = httpClient;
             _httpConfiguration = httpConfiguration;

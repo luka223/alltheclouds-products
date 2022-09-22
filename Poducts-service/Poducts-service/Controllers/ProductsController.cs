@@ -16,6 +16,10 @@ namespace Poducts_service.Controllers
             _productsService = productsService;
         }
 
+        /// <summary>
+        /// Gets list of all products avaiable on All The Clouds.
+        /// </summary>
+        /// <returns>List of products</returns>
         [HttpGet(Name = "GetProducts")]
         public async Task<List<ProductDTO>> GetProducts()
         {

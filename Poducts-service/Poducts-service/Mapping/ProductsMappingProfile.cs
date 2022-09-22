@@ -5,8 +5,7 @@ using Poducts_service.DTO;
 namespace Poducts_service.Mapping
 {
     /// <summary>
-    /// Mapping profile for mapping <see cref="Product"/> to <see cref="ProductDTO"/>.
-    /// Does the field mapping and price increase because of the business requirement.
+    /// Mapping profile for mapping for product related model classes.
     /// </summary>
     public class ProductsMappingProfile : Profile
     {
