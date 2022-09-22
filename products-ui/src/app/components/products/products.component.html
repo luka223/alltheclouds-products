@@ -1,0 +1,37 @@
+<div class="products-wrapper">
+    <div class="mat-elevation-z8">
+        <table class="products-table" mat-table [dataSource]="products">
+            <!-- Name Column -->
+            <ng-container matColumnDef="name">
+                <th mat-header-cell *matHeaderCellDef> Name </th>
+                <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+            </ng-container>
+
+            <!-- Description Column -->
+            <ng-container matColumnDef="description">
+                <th mat-header-cell *matHeaderCellDef> Description </th>
+                <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+            </ng-container>
+
+            <!-- Unit Price Column -->
+            <ng-container matColumnDef="unitPrice">
+                <th mat-header-cell *matHeaderCellDef> Unit Price </th>
+                <td mat-cell *matCellDef="let element"> {{element.unitPrice.toFixed(2)}} </td>
+            </ng-container>
+
+            <!-- Maximum quantity Column -->
+            <ng-container matColumnDef="maximumQuantity">
+                <th mat-header-cell *matHeaderCellDef> Maximum quantity </th>
+                <td mat-cell *matCellDef="let element"> {{element.maximumQuantity === null? 'Unlimited' :
+                    element.maximumQuantity}} </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns" class="products-header"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;" class="product-row"></tr>
+        </table>
+        <mat-paginator [pageSizeOptions]="pageSizeOptions"
+                       showFirstLastButtons
+                       aria-label="Select page of periodic elements">
+        </mat-paginator>
+    </div>
+</div>
